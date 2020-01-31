@@ -54,6 +54,7 @@ ExternalProject_Add( Vulkan-ValidationLayers
         BINARY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Vulkan-ValidationLayers-build
         DEPENDS Vulkan-Headers Vulkan-Loader glslang
         CMAKE_ARGS
+            -DCMAKE_INSTALL_PREFIX=install
             -j8
             -DVULKAN_HEADERS_INSTALL_DIR=${CMAKE_CURRENT_SOURCE_DIR}/Vulkan-Headers-build/install
             -DVULKAN_LOADER_INSTALL_DIR=${CMAKE_CURRENT_SOURCE_DIR}/Vulkan-Loader-build/install
